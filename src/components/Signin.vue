@@ -8,11 +8,12 @@ Password : <input type='password' name='password' ref='password'><br>
 </template>
 
 <script>
+var access_token1
 export default {
   name: 'Signin',
   data () {
     return {
-      msg: 'good'
+      access_token: access_token1
     }
   },
   methods: {
@@ -30,8 +31,9 @@ export default {
           }
         })
         .then(res => {
-          alert(res.data)
+          access_token1 = res.data.data.access_token
         })
+       window.open('http://localhost:8080/index')
     }
   }
 }

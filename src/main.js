@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+// import tokencomponent from './components/Signin'
+
+// Vue.component('token', tokencomponent)
 
 Vue.config.productionTip = false
-// Vue.use(axios)
 Vue.prototype.$http = axios
 /* eslint-disable no-new */
 new Vue({
